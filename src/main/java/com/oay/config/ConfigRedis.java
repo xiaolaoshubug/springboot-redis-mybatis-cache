@@ -81,7 +81,7 @@ public class ConfigRedis {
         // 定制缓存数据序列化方式及时效
         RedisCacheConfiguration config = RedisCacheConfiguration.defaultCacheConfig()
                 // 设置缓存过期时间为一天
-                .entryTtl(Duration.ofDays(1))
+                .entryTtl(Duration.ofDays(30))
                 //存储序列方式
                 .serializeKeysWith(RedisSerializationContext.SerializationPair
                         .fromSerializer(strSerializer))
