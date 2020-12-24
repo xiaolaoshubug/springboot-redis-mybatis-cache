@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 /*********************************************************
  * @Package: com.oay.controller
  * @ClassName: UserController.java
- * @Description： 暴露接口
+ * @Description：  暴露接口
  * -----------------------------------
  * @author：ouay
  * @Version：v1.0

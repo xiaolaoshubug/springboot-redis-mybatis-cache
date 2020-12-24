@@ -20,7 +20,7 @@ import java.time.Duration;
 /*********************************************************
  * @Package: com.oay.config
  * @ClassName: ConfigRedis.java
- * @Description： redis配置类
+ * @Description：  redis配置类
  * -----------------------------------
  * @author：ouay
  * @Version：v1.0

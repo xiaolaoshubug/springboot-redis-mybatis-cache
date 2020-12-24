@@ -10,7 +10,7 @@ import java.util.List;
 /*********************************************************
  * @Package: com.oay.mapper
  * @ClassName: UserMapper.java
- * @Description： mapper接口类
+ * @Description：  mapper接口类
  * -----------------------------------
  * @author：ouay
  * @Version：v1.0

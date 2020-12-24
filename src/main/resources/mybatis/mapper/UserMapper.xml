@@ -20,7 +20,7 @@
     </select>
 
     <select id="updateUser" resultType="user" parameterType="user">
-        UPDATE mybatis.user
+        UPDATE  mybatis.user
         <set>
             <if test="name != null">
                 name = #{name},

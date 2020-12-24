@@ -7,7 +7,7 @@ import java.util.List;
 /*********************************************************
  * @Package: com.oay.service
  * @ClassName: UserService.java
- * @Description： 服务接口类
+ * @Description：  服务接口类
  * -----------------------------------
  * @author：ouay
  * @Version：v1.0

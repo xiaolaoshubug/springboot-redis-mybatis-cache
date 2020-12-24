@@ -5,7 +5,7 @@ import lombok.Data;
 /*********************************************************
  * @Package: com.oay.utils
  * @ClassName: Result.java
- * @Description：描述
+ * @Description： 全局返回
  * -----------------------------------
  * @author：ouay
  * @Version：v1.0
