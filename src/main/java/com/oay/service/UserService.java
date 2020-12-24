@@ -15,16 +15,12 @@ import java.util.List;
  *********************************************************/
 public interface UserService {
 
-    //  根据ID查询一个用户
     User queryById(Integer id);
 
-    //  查询所有用户
     List<User> queryAll();
 
-    //  修改用户
     User updateUser(User user);
 
-    //  删除一个用户
     int deleteUser(Integer id);
 
 }
