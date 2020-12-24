@@ -3,6 +3,7 @@ package com.oay.service;
 import com.oay.entity.User;
 import com.oay.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
@@ -41,7 +42,12 @@ public class UserServiceImpl implements UserService {
     @CachePut(value = "queryById", key = "#user.id")
     public User updateUser(User user) {
         userMapper.updateUser(user);
-        return userMapper.queryById(user.getId());
+        return this.queryById(user.getId());
     }
 
+    @Override
+    @CacheEvict(value = "queryById", key = "#id")
+    public int deleteUser(Integer id) {
+        return userMapper.deleteUser(id);
+    }
 }

@@ -7,7 +7,7 @@
     <select id="queryById" resultType="user" parameterType="Integer">
 
         SELECT *
-        FROM user
+        FROM mybatis.user
         WHERE id = #{id};
 
     </select>
@@ -15,12 +15,12 @@
     <select id="queryAll" resultType="user">
 
         SELECT *
-        FROM user
+        FROM mybatis.user
 
     </select>
 
     <select id="updateUser" resultType="user" parameterType="user">
-        UPDATE user
+        UPDATE mybatis.user
         <set>
             <if test="name != null">
                 name = #{name},
@@ -31,4 +31,11 @@
         </set>
         where id = #{id}
     </select>
+
+    <delete id="deleteUser" parameterType="Integer">
+        DELETE
+        FROM mybatis.user
+        WHERE id = #{id};
+    </delete>
+
 </mapper>

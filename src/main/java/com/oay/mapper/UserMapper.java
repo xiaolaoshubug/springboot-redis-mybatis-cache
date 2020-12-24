@@ -25,4 +25,6 @@ public interface UserMapper {
     List<User> queryAll();
 
     User updateUser(User user);
+
+    int deleteUser(@Param("id") Integer id);
 }

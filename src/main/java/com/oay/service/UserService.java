@@ -1,7 +1,6 @@
 package com.oay.service;
 
 import com.oay.entity.User;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -16,10 +15,16 @@ import java.util.List;
  *********************************************************/
 public interface UserService {
 
-    User queryById(@Param("id") Integer id);
+    //  根据ID查询一个用户
+    User queryById(Integer id);
 
+    //  查询所有用户
     List<User> queryAll();
 
+    //  修改用户
     User updateUser(User user);
+
+    //  删除一个用户
+    int deleteUser(Integer id);
 
 }
