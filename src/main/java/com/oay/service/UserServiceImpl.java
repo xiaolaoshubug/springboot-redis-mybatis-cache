@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Cacheable(value = "queryAll")
+    /*@Cacheable(value = "queryAll")*/
     public List<User> queryAll() {
         return userMapper.queryAll();
     }
