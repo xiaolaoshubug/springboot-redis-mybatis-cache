@@ -43,7 +43,7 @@ public class SendSmsImpl implements SendSms {
         //  自定义模板--> 参数在阿里云面板短信服务获取
         request.putQueryParameter("PhoneNumbers", iphone);                  //  手机号
         request.putQueryParameter("SignName", "签名名称");            //   签名名称
-        request.putQueryParameter("PhoneNumbers", "模板的code");    //   模板的code
+        request.putQueryParameter("TemplateCode", "模板的code");    //   模板的code
         //  构建一个测试短信
         HashMap<String, String> map = new HashMap<>();
         //  生成四位随机验证码

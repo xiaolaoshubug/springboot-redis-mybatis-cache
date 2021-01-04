@@ -1,7 +1,5 @@
 package com.oay.sms;
 
-import java.util.Map;
-
 /*********************************************************
  * @Package: com.oay.sms
  * @ClassName: SendSms.java
