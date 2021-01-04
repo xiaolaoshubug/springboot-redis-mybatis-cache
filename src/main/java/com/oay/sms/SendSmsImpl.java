@@ -30,7 +30,7 @@ public class SendSmsImpl implements SendSms {
     private final Logger log = Logger.getLogger(this.getClass());
 
     @Override
-    public boolean send(String iphone) {
+    public boolean send(String iphone, String templateCode) {
         //连接阿里云
         DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "用户的AccessKey ID", "密码");
         IAcsClient client = new DefaultAcsClient(profile);
@@ -41,9 +41,9 @@ public class SendSmsImpl implements SendSms {
         request.setSysVersion("2017-05-25");
         request.setSysAction("SendSms");
         //  自定义模板--> 参数在阿里云面板短信服务获取
-        request.putQueryParameter("PhoneNumbers", iphone);                  //  手机号
-        request.putQueryParameter("SignName", "签名名称");            //   签名名称
-        request.putQueryParameter("TemplateCode", "模板的code");    //   模板的code
+        request.putQueryParameter("PhoneNumbers", iphone);                //  手机号
+        request.putQueryParameter("SignName", "签名名称");           //   签名名称
+        request.putQueryParameter("TemplateCode", templateCode);          //   模板的code
         //  构建一个测试短信
         HashMap<String, String> map = new HashMap<>();
         //  生成四位随机验证码

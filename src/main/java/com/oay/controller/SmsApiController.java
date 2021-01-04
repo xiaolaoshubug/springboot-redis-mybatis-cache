@@ -38,7 +38,7 @@ public class SmsApiController {
             return Result.succ(phone + ":" + code + "已存在，还没过期");
         }
         //  调用短信服务
-        boolean flag = sendSms.send(phone);
+        boolean flag = sendSms.send(phone, "短信模板code");
         if (flag) {
             redisUtil.set(phone, code, 5);
             return Result.succ(phone + ":" + code + "发送成功");

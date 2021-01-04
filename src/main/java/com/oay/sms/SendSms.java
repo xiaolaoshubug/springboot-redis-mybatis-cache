@@ -11,8 +11,9 @@ package com.oay.sms;
  *********************************************************/
 public interface SendSms {
     /**
-     * @param iphone  手机号
-     * @return 返回响应信息
+     * @param iphone 手机号
+     * @param templateCode  短信模板
+     * @return 返回信息
      */
-    boolean send(String iphone);
+    boolean send(String iphone,String templateCode);
 }
